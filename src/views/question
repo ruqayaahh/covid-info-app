@@ -1,0 +1,84 @@
+// //   Using the api on https://github.com/M-Media-Group/Covid-19-API Build a covid-19 information web application. On the homepage, the user can see information about the following:
+
+  // // - Total Cases (worldwide) = 116,216,254
+  // // - Active Cases (worldwide) = 47,895,456
+  // // - Total Recoveries (worldwide) = 65,737,763
+  // // - total Deaths (worldwide) = 2,583,035
+  // // - top 3 affected countries (including the total number of cases in each of those countries)
+  // // - total number of cases in each of this regions Europe, Americas, Asia, Africa, Oceania. [34633537, ]
+  // // - A table that shows all the countries with the total cases, recoveries, active cases,
+  // and deaths
+  // // There should also be a page that will display the information for a single country
+
+  // // **Extras
+
+  // // Add a search box where I can search by country and it will show the data on a page
+
+  Global.All.recovered
+
+dataList/Europe = dataList[0].data
+dataList/Americas = dataList[1].data
+dataList/Asia = dataList[2].data
+dataList/Africa = dataList[3].data
+dataList/Oceania = dataList[4].data
+
+
+
+       // } else if (this.selectedTab === 'Asia') {
+      //   console.log(this.selectedTab);
+      //   this.$axios
+      //     .get('/cases?continent=Asia')
+      //     .then(({ data }) => {
+      //       regionData = (data);
+      //       const entries = Object.entries(regionData);
+      //       const filterCountryCases = [];
+      //       const filterCases = [];
+      //       entries.map((item) => filterCountryCases.push([item[1].All.confirmed]));
+      //       filterCountryCases.forEach((item) => filterCases.push(item[0]));
+      //       this.asiaConfirmed = filterCases.reduce((a, b) => a + b, 0);
+      //       console.log(this.asiaConfirmed);
+      //     }).catch((error) => {
+      //       console.log(error);
+      //     })
+      //     .finally(() => {
+      //       this.isLoading = false;
+      //     });
+      // } else if (this.selectedTab === 'Africa') {
+      //   console.log(this.selectedTab);
+      //   this.$axios
+      //     .get('/cases?continent=Africa')
+      //     .then(({ data }) => {
+      //       regionData = (data);
+      //       const entries = Object.entries(regionData);
+      //       const filterCountryCases = [];
+      //       const filterCases = [];
+      //       entries.map((item) => filterCountryCases.push([item[1].All.confirmed]));
+      //       filterCountryCases.forEach((item) => filterCases.push(item[0]));
+      //       this.asiaConfirmed = filterCases.reduce((a, b) => a + b, 0);
+      //       console.log(this.africaConfirmed);
+      //     }).catch((error) => {
+      //       console.log(error);
+      //     })
+      //     .finally(() => {
+      //       this.isLoading = false;
+      //     });
+      // } else if (this.selectedTab === 'Africa') {
+      //   this.$axios
+      //     .get('/cases?continent=Africa')
+      //     .then(({ data }) => {
+      //       regionData = (data);
+      //       const entries = Object.entries(regionData);
+      //       const filterCountryCases = [];
+      //       const filterCases = [];
+      //       entries.map((item) => filterCountryCases.push([item[1].All.confirmed]));
+      //       filterCountryCases.forEach((item) => filterCases.push(item[0]));
+      //       this.asiaConfirmed = filterCases.reduce((a, b) => a + b, 0);
+      //       console.log(this.oceaniaConfirmed);
+      //     }).catch((error) => {
+      //       console.log(error);
+      //     })
+      //     .finally(() => {
+      //       this.isLoading = false;
+      //     });
+      // }
+      // }); 
