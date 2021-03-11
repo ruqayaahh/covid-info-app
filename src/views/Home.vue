@@ -1,39 +1,42 @@
 <template>
   <div class='home'>
-    <!-- <img alt='Vue logo' src='../assets/logo.png' /> -->
-    <div>
-      <div>
-        <h3>Total Cases(worlwide): <p>{{ data.Global.All.confirmed }}</p></h3>
+    <div id="subheader">
+      <div class="subheader-item">
+        <div>
+          <h3>Worldwide</h3>
+          <h4>Total Cases: <span>{{ data.Global.All.confirmed }}</span></h4>
+        </div>
+        <div>
+          <h4>Active Cases: <span> {{ data.Global.All.confirmed
+            - (data.Global.All.recovered
+        + data.Global.All.deaths) }}</span></h4>
+        </div>
+        <div>
+          <h4>Total Recoveries: <span>{{ data.Global.All.recovered }}</span></h4>
+        </div>
+        <div>
+          <h4>Total Deaths: <span>{{ data.Global.All.deaths }}</span></h4>
+        </div>
       </div>
-      <div>
-        <h3>Active Cases(worlwide): <p> {{ data.Global.All.confirmed - (data.Global.All.recovered
-      + data.Global.All.deaths) }}</p></h3>
-      </div>
-      <div>
-        <h3>Total Recoveries(worlwide): <p>{{ data.Global.All.recovered }}</p></h3>
-      </div>
-      <div>
-        <h3>Total Deaths(worlwide): <p>{{ data.Global.All.deaths }}</p></h3>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h1>
-        Top 3 affected Countries
-      </h1>
-      </div>
-      <div>
-        <button @click="affected">Check top three affected countries</button>
-        <p>1. {{ topThree[0][0] }} : {{ topThree[0][1] }}</p>
-        <p>2. {{ topThree[1][0] }} : {{ topThree[1][1] }}</p>
-        <p>3. {{ topThree[2][0] }} : {{ topThree[2][1] }}</p>
+      <div class="subheader-item">
+        <div>
+          <button @click="affected"><h5>
+          Click to check current top 3 affected countries
+        </h5></button>
+          <p>1. {{ topThree[0][0] }} : {{ topThree[0][1] }}</p>
+          <p>2. {{ topThree[1][0] }} : {{ topThree[1][1] }}</p>
+          <p>3. {{ topThree[2][0] }} : {{ topThree[2][1] }}</p>
+        </div>
       </div>
     </div>
 
     <div>
       <div id="tab">
-        <h2>Check data by Continent by clicking the continent</h2>
-        <span
+        <div>
+          <h2>Check data by continent</h2>
+        </div>
+       <div id="tab-items">
+          <span
           :class='{ active: selectedTab === continent }'
           v-for='(continent, index) in continents'
           :key='index'
@@ -41,32 +44,23 @@
         >
           {{ continent }}</span
         >
+       </div>
       </div>
-      <div>
+      <div id="result">
         <div v-if="selectedTab === 'Europe'">
-        <h1>{{ continents[0] }}</h1>
-        <br>
-          <h1>{{ cases[0] }}</h1>
+          <p>{{ cases[0] }} Total confirmed cases</p>
         </div>
         <div v-if="selectedTab === 'Americas'">
-        <h1>{{ continents[1] }}</h1>
-        <br>
-          <h1>{{ cases[1] }}</h1>
+          <p>{{ cases[1] }} Total confirmed cases</p>
         </div>
         <div v-if="selectedTab === 'Asia'">
-        <h1>{{ continents[2] }}</h1>
-        <br>
-          <h1>{{ cases[2] }}</h1>
+          <p>{{ cases[2] }} Total confirmed cases</p>
         </div>
         <div v-if="selectedTab === 'Africa'">
-        <h1>{{ continents[3] }}</h1>
-        <br>
-          <h1>{{ cases[3] }}</h1>
+          <p>{{ cases[3] }} Total confirmed cases</p>
         </div>
         <div v-if="selectedTab === 'Oceania'">
-        <h1>{{ continents[4] }}</h1>
-        <br>
-          <h1>{{ cases[4] }}</h1>
+          <p>{{ cases[4] }} Total confirmed cases</p>
         </div>
       </div>
     </div>
@@ -141,6 +135,6 @@ export default {
 
 <style scoped>
 .active {
-  background-color: #aaaaaa;
+  background-color: #17a2b8;
 }
 </style>

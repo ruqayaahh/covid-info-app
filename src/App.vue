@@ -17,39 +17,80 @@ export default {
 </script>
 
 <style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   background-color: #0d1924;
   color: silver;
 }
-
-#nav {
+#subheader {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
   padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  align-items: center;
+  font-size: 32px;
+  .subheader-item {
+    width: 50%;
+    button {
+      width: 100%;
+      background-color: silver;
+      border: 3px solid#17a2b8;
+      outline: none;
+      display: flex;
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    p {
+      font-size: 20px;
     }
   }
 }
 #tab {
-  display: grid;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
   justify-content: center;
+  align-items: center;
   background-color: silver;
   color: #02101d;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  align-content: center;
+  font-size: 20px;
+  #tab-items {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+#result {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 table {
+  margin-top: 10px;
+  width: 100%;
   border: 5px solid silver;
-  tr, td {
+  tr, td, th {
     border: 2px rgb(231, 157, 157);
+    padding: 10px;
   }
 }
 </style>
